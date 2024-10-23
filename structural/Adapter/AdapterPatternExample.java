@@ -1,3 +1,5 @@
+package structural.Adapter;
+
 interface AmericanSocket {
         String provideElectricity();
 }
@@ -10,7 +12,7 @@ class EuropeanPlug {
 }
 
 class AdapterAmericanToEuropean implements AmericanSocket {
-        private EuropeanPlug europeanPlug;
+        private final EuropeanPlug europeanPlug;
 
         public AdapterAmericanToEuropean(EuropeanPlug europeanPlug) {
                 this.europeanPlug = europeanPlug;
